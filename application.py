@@ -1,9 +1,7 @@
 ## flask imports
 from flask import Flask
-
-from flask import Response, request, jsonify, render_template
-from flask import url_for
-import AI
+from AI import _is_string_spam
+from flask import Response, request, jsonify, render_template, url_for
 import json
 import os
 
@@ -20,5 +18,8 @@ def homePage():
 @application.route('/test', methods=['POST'])
 def testEmail():
     newData = request.get_json()
+    print(newData)
     email = newData['email']
-    return 'hi'
+    result = _is_string_spam(email)
+    print(result)
+    return result

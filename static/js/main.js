@@ -16,13 +16,13 @@ function handleSubmit(){
     }
     let URL = 'test';
     $.ajax({
-        type: 'POST',
+        method: 'POST',
         url: URL,
         type: 'json',
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(dataToSend),
         success: function(result){
-            console.log(result);
+            alert(result)
         },
         error: function(error){
             console.log(error);

@@ -6,7 +6,7 @@ from sklearn.model_selection import GridSearchCV
 
 # loading dataset
 dataframe = pd.read_csv("spam.csv")
-print(dataframe.describe())
+#print(dataframe.describe())
 
 #splitting 80% into training set and 20% into testing set
 emailText = dataframe['EmailText']
@@ -38,5 +38,5 @@ print("score:", model.score(testFeatures, labelTest))
 
 def _is_string_spam(string):
     transform = cv.transform([string])
-    print(model.predict(transform))
+    return(model.predict(transform)[0])
 
