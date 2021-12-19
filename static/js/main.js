@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    textarea = $('#text-area')
+    textarea = $('#text-area');
     submitBtn = $('#submitBtn');
     submitBtn.click(function(){
         handleSubmit()
@@ -9,7 +9,6 @@ $(document).ready(function(){
 
 
 function handleSubmit(){
-    console.log("handled");
     email = textarea.val();
     var dataToSend = {
         'email' : email
@@ -22,7 +21,7 @@ function handleSubmit(){
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(dataToSend),
         success: function(result){
-            alert(result)
+            document.getElementById('result-header').innerText = result;
         },
         error: function(error){
             console.log(error);

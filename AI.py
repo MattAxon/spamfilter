@@ -38,5 +38,8 @@ print("score:", model.score(testFeatures, labelTest))
 
 def _is_string_spam(string):
     transform = cv.transform([string])
-    return(model.predict(transform)[0])
+    tempresult = model.predict(transform)[0]
+    result = tempresult[0:1].upper() + tempresult[1:]
+    print(result)
+    return(result)
 

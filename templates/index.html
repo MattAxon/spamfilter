@@ -12,13 +12,14 @@
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 <body>
-    <div id="nav-bar" class="navbar">
+    <div id="nav-bar" class="navbar navbar-dark bg-dark">
         <div class="navbar-header">
             <nav class="navbar-brand" id="navbrand">FilterBreaker</div>
-                <p id="sub-heading">Beat Spam Filters</p>
+                <p  id="sub-heading">Beat Spam Filters</p>
         </div>
     </div>
     <div class="main-body">
+        <h1 id="result-header"></h1>
         <form>
             <div class="form-row text-right">
                 <textarea placeholder="Test your emails against our AI spam filter" id="text-area" class="form-control" rows="17"></textarea>

@@ -18,8 +18,6 @@ def homePage():
 @application.route('/test', methods=['POST'])
 def testEmail():
     newData = request.get_json()
-    print(newData)
     email = newData['email']
     result = _is_string_spam(email)
-    print(result)
     return result

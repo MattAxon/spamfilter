@@ -29,6 +29,7 @@
     padding: 0px;
     text-align: center;
     width: 100%;
+    color: white;
 }
 
 form{
@@ -48,4 +49,11 @@ form{
     text-align: right;
     width: 80%;
     margin-top: 2vh;
+}
+
+
+#result-header{
+    height: 1.5vh;
+    text-align: center;
+    padding-top: 2vh;
 }
