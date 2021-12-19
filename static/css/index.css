@@ -33,7 +33,7 @@
 }
 
 form{
-    padding-top: 20vh;
+    padding-top: 18vh;
 }
 #text-area{
     width: 80%;
@@ -54,6 +54,12 @@ form{
 
 #result-header{
     height: 1.5vh;
+    text-align: center;
+    padding-top: 2vh;
+}
+
+article{
+    margin: auto;
     text-align: center;
     padding-top: 2vh;
 }
